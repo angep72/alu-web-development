@@ -1,1 +1,1 @@
-This page contains pagination
+This page contains paginations
