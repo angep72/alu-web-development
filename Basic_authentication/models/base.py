@@ -126,7 +126,6 @@ class Base():
         """ Search all objects with matching attributes
         """
         s_class = cls.__name__
-
         def _search(obj):
             if len(attributes) == 0:
                 return True
@@ -134,5 +133,14 @@ class Base():
                 if (getattr(obj, k) != v):
                     return False
             return True
-
+<<<<<<< HEAD
+        
         return list(filter(_search, DATA[s_class].values()))
+=======
+        try:
+            res = list(filter(_search, DATA[s_class].values()))
+        except Exception:
+            res = []
+
+        return res
+>>>>>>> 802b8f3c485136156e0c3fb6df2b6dacea68486d
